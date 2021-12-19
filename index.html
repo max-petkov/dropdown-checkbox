@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>HRS Work Search</title>
+</head>
+
+<body>
+    <section class="find-job">
+        <div class="container">
+            <div>
+                <h2 class="find-job__title">Търси работа</h2>
+                <p class="find-job__subtitle">Намери работата, която обичаш</p>
+            </div>
+            <form action="#" class="find-job__form">
+                <div class="input-container input-container--search">
+                    <input type="text" class="form-control form-control--search"
+                        placeholder="Име, позиция или ключова дума">
+                </div>
+                <div class="find-job__sector">
+                    <div class="sector-value">
+                        <p>Сектор</p>
+                        <img src="./svg/fa-icon.svg" alt="">
+                    </div>
+                    <ul class="sector-list d-none">
+                        <li class="sector-item">
+                            <input id="checkbox1" type="checkbox" name="sector-1" id="" value="sector-1">
+                            <label for="checkbox1" for="sector-1">Сектор 1</label>
+                        </li>
+                        <li class="sector-item">
+                            <input id="checkbox2" type="checkbox" name="sector-2" id="" value="sector-2">
+                            <label for="checkbox2">Сектор 2</label>
+                        </li>
+                        <li class="sector-item">
+                            <input id="checkbox3" type="checkbox" name="sector-3" id="" value="sector-3">
+                            <label for="checkbox3">Сектор 3</label>
+                        </li>
+                        <li class="sector-item">
+                            <input id="checkbox4" type="checkbox" name="sector-4" id="" value="sector-4">
+                            <label for="checkbox4">Сектор 4</label>
+                        </li>
+                    </ul>
+                </div>
+                <select name="" class="form-control form-control--select">
+                    <option value="" disabled selected>Ниво (2)</option>
+                </select>
+                <select name="" class="form-control form-control--select">
+                    <option value="" disabled selected>Език</option>
+                </select>
+                <select name="" class="form-control form-control--select">
+                    <option value="" disabled selected>Град</option>
+                </select>
+                <select name="" class="form-control form-control--select">
+                    <option value="" disabled selected>Вид заетост</option>
+                </select>
+                <input type="submit" class="btn btn-secondary">
+            </form>
+        </div>
+    </section>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+/* Variables */
+:root {
+  --color-secondary-dark: #ff6f1f;
+  --color-placeholder: #b2b6bd;
+
+  --bg-color-warning-light: #f9f3f0;
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color-warning-light);
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.container {
+  max-width: 1496px;
+  margin: 0 auto;
+}
+
+/* Helpers */
+.color-secondary--dark {
+  color: var(--color-secondary-dark);
+}
+
+.d-none {
+  display: none;
+}
+
+/* Find Job */
+.find-job {
+  margin-top: 80px;
+  padding: 0 48px;
+}
+
+.find-job__title {
+  margin-bottom: 16px;
+}
+
+.find-job__subtitle {
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.find-job__form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.find-job__form [type="submit"] {
+  grid-column: 4/5;
+  grid-row: -1;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.input-container--search {
+  position: relative;
+}
+
+.input-container--search::before {
+  content: url("./svg/search.svg");
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+}
+
+.form-control--search {
+  padding-left: 48px;
+}
+
+/* Find Job Sector */
+.find-job__sector {
+  background: #fff;
+  border-radius: 4px;
+  color: var(--color-placeholder);
+  position: relative;
+}
+
+.sector-value {
+  padding: 16px;
+  padding-right: 17px;
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.sector-list {
+  list-style-type: none;
+  padding: 0 16px;
+  padding-bottom: 16px;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.sector-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* Form Select */
+.form-control--select {
+  appearance: none;
+  background-image: url("./svg/fa-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 53%;
+  padding-left: 16px;
+}
+
+.form-control--select {
+  color: var(--color-placeholder);
+  font-size: 16px;
+}
+
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 16px;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary-dark);
+  color: #fff;
+}
