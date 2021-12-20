@@ -2,6 +2,7 @@
 :root {
   --color-secondary-dark: #ff6f1f;
   --color-placeholder: #b2b6bd;
+  --color-black: #000;
 
   --bg-color-warning-light: #f9f3f0;
 }
@@ -40,6 +41,10 @@ h2 {
 }
 
 /* Helpers */
+.ml-1 {
+  margin-left: 4px;
+}
+
 .color-secondary--dark {
   color: var(--color-secondary-dark);
 }
@@ -63,33 +68,64 @@ h2 {
   margin-bottom: 32px;
 }
 
-.find-job__form {
+/* Form */
+/* General */
+.form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  font-family: sans-serif;
 }
 
-.find-job__form [type="submit"] {
-  grid-column: 4/5;
-  grid-row: -1;
-}
-
-/* Forms */
-.form-control {
+.form__input {
   border-radius: 4px;
   outline: none;
   border: none;
   background: #fff;
-  height: 100%;
+  color: var(--color-placeholder);
   width: 100%;
-  padding: 16px 0;
+  padding: 16px;
 }
 
-.input-container--search {
+.form__submit {
+  grid-column: 4/5;
+  grid-row: -1;
+  max-width: 186px;
+}
+
+.checkbox-list {
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--color-placeholder);
+  z-index: 1;
+}
+
+.checkbox-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.chevron {
+  transition: 0.3s;
+  transform: rotate(0deg);
+}
+
+.chevron--active {
+  transform: rotate(180deg);
+}
+
+/* Search Input */
+.search-container {
   position: relative;
 }
 
-.input-container--search::before {
+.search-container::before {
   content: url("./svg/search.svg");
   position: absolute;
   top: 50%;
@@ -97,57 +133,78 @@ h2 {
   transform: translate(0, -50%);
 }
 
-.form-control--search {
+.form__input--search {
   padding-left: 48px;
 }
 
-/* Find Job Sector */
-.find-job__sector {
+.form__input--search::placeholder {
+  color: var(--color-placeholder);
+  font-size: 14px;
+}
+
+/* Job Sector */
+.sector-container {
   background: #fff;
   border-radius: 4px;
-  color: var(--color-placeholder);
   position: relative;
 }
 
-.sector-value {
-  padding: 16px;
-  padding-right: 17px;
+.form__input--sector {
   display: flex;
   justify-content: space-between;
   cursor: default;
 }
 
-.sector-list {
-  list-style-type: none;
-  padding: 0 16px;
-  padding-bottom: 16px;
-  position: absolute;
+/* Job Level */
+.level-container {
   background: #fff;
-  width: 100%;
   border-radius: 4px;
+  position: relative;
 }
 
-.sector-item:not(:last-child) {
-  margin-bottom: 16px;
+.form__input--level {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
 }
 
-/* Form Select */
-.form-control--select {
-  appearance: none;
-  background-image: url("./svg/fa-icon.svg");
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 53%;
-  padding-left: 16px;
+/* Job Language */
+.language-container {
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
 }
 
-.form-control--select {
-  color: var(--color-placeholder);
-  font-size: 16px;
+.form__input--language {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
 }
 
-::placeholder {
-  color: var(--color-placeholder);
+/* Job City */
+.city-container {
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.form__input--city {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+/* Job Employment Type */
+.employment-type-container {
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.form__input--employment-type {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
 }
 
 /* Buttons */
