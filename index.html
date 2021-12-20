@@ -16,55 +16,140 @@
                 <h2 class="find-job__title">Търси работа</h2>
                 <p class="find-job__subtitle">Намери работата, която обичаш</p>
             </div>
-            <form action="#" class="find-job__form">
-                <div class="input-container input-container--search">
-                    <input type="text" class="form-control form-control--search"
+            <form action="#" class="form form--find-job">
+                <div class="search-container">
+                    <input type="text" class="form__input form__input--search"
                         placeholder="Име, позиция или ключова дума">
                 </div>
-                <div class="find-job__sector">
-                    <div class="sector-value">
-                        <p>Сектор</p>
-                        <img src="./svg/fa-icon.svg" alt="">
+                <div class="sector-container">
+                    <div class="form__input form__input--sector js-slide-checkbox">
+                        <p>Сектор <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <ul class="sector-list d-none">
-                        <li class="sector-item">
-                            <input id="checkbox1" type="checkbox" name="sector-1" id="" value="sector-1">
-                            <label for="checkbox1" for="sector-1">Сектор 1</label>
+                    <ul class="checkbox-list checkbox-list--sector d-none">
+                        <li class="checkbox-item">
+                            <input id="sector1" type="checkbox" name="sector1" id="" value="sector1">
+                            <label for="sector1" for="sector-1">Сектор 1</label>
                         </li>
-                        <li class="sector-item">
-                            <input id="checkbox2" type="checkbox" name="sector-2" id="" value="sector-2">
-                            <label for="checkbox2">Сектор 2</label>
+                        <li class="checkbox-item">
+                            <input id="sector2" type="checkbox" name="sector2" id="" value="sector2">
+                            <label for="sector2">Сектор 2</label>
                         </li>
-                        <li class="sector-item">
-                            <input id="checkbox3" type="checkbox" name="sector-3" id="" value="sector-3">
-                            <label for="checkbox3">Сектор 3</label>
+                        <li class="checkbox-item">
+                            <input id="sector3" type="checkbox" name="sector3" id="" value="sector3">
+                            <label for="sector3">Сектор 3</label>
                         </li>
-                        <li class="sector-item">
-                            <input id="checkbox4" type="checkbox" name="sector-4" id="" value="sector-4">
-                            <label for="checkbox4">Сектор 4</label>
+                        <li class="checkbox-item">
+                            <input id="sector4" type="checkbox" name="sector4" id="" value="sector4">
+                            <label for="sector4">Сектор 4</label>
                         </li>
                     </ul>
                 </div>
-                <select name="" class="form-control form-control--select">
-                    <option value="" disabled selected>Ниво (2)</option>
-                </select>
-                <select name="" class="form-control form-control--select">
-                    <option value="" disabled selected>Език</option>
-                </select>
-                <select name="" class="form-control form-control--select">
-                    <option value="" disabled selected>Град</option>
-                </select>
-                <select name="" class="form-control form-control--select">
-                    <option value="" disabled selected>Вид заетост</option>
-                </select>
-                <input type="submit" class="btn btn-secondary">
+                <div class="level-container">
+                    <div class="form__input form__input--level js-slide-checkbox">
+                        <p>Ниво <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    </div>
+                    <ul class="checkbox-list checkbox-list--level d-none">
+                        <li class="checkbox-item">
+                            <input id="level1" type="checkbox" name="level1" value="level1">
+                            <label for="level1" for="level-1">Ниво 1</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="level2" type="checkbox" name="level2" value="level2">
+                            <label for="level2">Ниво 2</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="level3" type="checkbox" name="level3" value="level3">
+                            <label for="level3">Ниво 3</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="level4" type="checkbox" name="level4" value="level4">
+                            <label for="level4">Ниво 4</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="language-container">
+                    <div class="form__input form__input--language js-slide-checkbox">
+                        <p>Език <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    </div>
+                    <ul class="checkbox-list checkbox-list--language d-none">
+                        <li class="checkbox-item">
+                            <input id="language1" type="checkbox" name="language1" value="language1">
+                            <label for="language1" for="language-1">Език 1</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="language2" type="checkbox" name="language2" value="language2">
+                            <label for="language2">Език 2</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="language3" type="checkbox" name="language3" value="language3">
+                            <label for="language3">Език 3</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="language4" type="checkbox" name="language4" value="language4">
+                            <label for="language4">Език 4</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="city-container">
+                    <div class="form__input form__input--city js-slide-checkbox">
+                        <p>Град <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    </div>
+                    <ul class="checkbox-list checkbox-list--city d-none">
+                        <li class="checkbox-item">
+                            <input id="city1" type="checkbox" name="city1" value="city1">
+                            <label for="city1" for="city-1">Град 1</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="city2" type="checkbox" name="city2" value="city2">
+                            <label for="city2">Град 2</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="city3" type="checkbox" name="city3" value="city3">
+                            <label for="city3">Град 3</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="city4" type="checkbox" name="city4" value="city4">
+                            <label for="city4">Град 4</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="employment-type-container">
+                    <div class="form__input form__input--employment-type js-slide-checkbox">
+                        <p>Вид заетост <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    </div>
+                    <ul class="checkbox-list checkbox-list--employment-type d-none">
+                        <li class="checkbox-item">
+                            <input id="employment-type1" type="checkbox" name="employment-type1"
+                                value="employment-type1">
+                            <label for="employment-type1" for="employment-type-1">Вид заетост 1</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="employment-type2" type="checkbox" name="employment-type2"
+                                value="employment-type2">
+                            <label for="employment-type2">Вид заетост 2</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="employment-type3" type="checkbox" name="employment-type3"
+                                value="employment-type3">
+                            <label for="employment-type3">Вид заетост 3</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input id="employment-type4" type="checkbox" name="employment-type4"
+                                value="employment-type4">
+                            <label for="employment-type4">Вид заетост 4</label>
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" value="Търси" class="btn btn-secondary form__submit">
             </form>
         </div>
     </section>
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./main.js"></script>
 </body>
 
