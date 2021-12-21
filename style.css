@@ -144,8 +144,6 @@ h2 {
 
 /* Job Sector */
 .sector-container {
-  background: #fff;
-  border-radius: 4px;
   position: relative;
 }
 
@@ -157,8 +155,6 @@ h2 {
 
 /* Job Level */
 .level-container {
-  background: #fff;
-  border-radius: 4px;
   position: relative;
 }
 
@@ -170,8 +166,6 @@ h2 {
 
 /* Job Language */
 .language-container {
-  background: #fff;
-  border-radius: 4px;
   position: relative;
 }
 
@@ -183,8 +177,6 @@ h2 {
 
 /* Job City */
 .city-container {
-  background: #fff;
-  border-radius: 4px;
   position: relative;
 }
 
@@ -196,12 +188,60 @@ h2 {
 
 /* Job Employment Type */
 .employment-type-container {
-  background: #fff;
-  border-radius: 4px;
   position: relative;
 }
 
 .form__input--employment-type {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+/* Job Salary */
+.salary-container {
+  grid-column: 1/3;
+  grid-row: 3;
+}
+
+.form__input--salary {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+/* Job Remote */
+.job-remote-container {
+  position: relative;
+}
+
+.form__radio-container {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0 16px;
+  padding-bottom: 16px;
+  color: var(--color-placeholder);
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.radio-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-value:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.job-remote-container {
+  grid-column: 3/4;
+  grid-row: 3;
+}
+
+.form__input--job-remote {
   display: flex;
   justify-content: space-between;
   cursor: default;

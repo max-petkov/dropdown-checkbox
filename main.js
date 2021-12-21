@@ -1,6 +1,6 @@
 $(function () {
   // Variables
-  const $showCheckboxes = $(".js-slide-checkbox");
+  const $showDropdownContent = $(".js-slide-dropdown");
   const $checkboxLists = $(".checkbox-list");
   const $sectorCheckboxes = $('.checkbox-list--sector [type="checkbox"]');
   const $levelCheckboxes = $('.checkbox-list--level [type="checkbox"]');
@@ -39,15 +39,15 @@ $(function () {
   }
 
   // Show checkboxes
-  $showCheckboxes.on("click", function () {
-    const $checkboxContainer = $(this).siblings(".checkbox-list");
+  $showDropdownContent.on("click", function () {
+    const $dropDownContent = $(this).siblings(".js-dropdown-content");
     const $chevron = $(this).find("img");
 
-    if ($checkboxContainer.is(":visible")) {
+    if ($dropDownContent.is(":visible")) {
       $chevron.removeClass("chevron--active");
-      $checkboxContainer.slideUp("fast");
+      $dropDownContent.slideUp("fast");
     } else {
-      $checkboxContainer.slideDown("fast");
+      $dropDownContent.slideDown("fast");
       $chevron.addClass("chevron--active");
     }
   });
@@ -55,10 +55,10 @@ $(function () {
   // Hide elements when click outside
   $(document).on("mouseup", function (e) {
     if (
-      !$(e.target).closest($checkboxLists).length &&
-      $($checkboxLists).is(":visible")
+      !$(e.target).closest(".js-dropdown-content").length &&
+      $(".js-dropdown-content").is(":visible")
     ) {
-      $($checkboxLists).slideUp("fast");
+      $(".js-dropdown-content").slideUp("fast");
       $(".chevron").removeClass("chevron--active");
     }
   });
