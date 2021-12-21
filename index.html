@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <title>HRS Work Search</title>
 </head>
 
@@ -22,11 +24,11 @@
                         placeholder="Име, позиция или ключова дума">
                 </div>
                 <div class="sector-container">
-                    <div class="form__input form__input--sector js-slide-checkbox">
+                    <div class="form__input form__input--sector js-slide-dropdown">
                         <p>Сектор <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <ul class="checkbox-list checkbox-list--sector d-none">
+                    <ul class="checkbox-list checkbox-list--sector d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="sector1" type="checkbox" name="sector1" id="" value="sector1">
                             <label for="sector1" for="sector-1">Сектор 1</label>
@@ -46,11 +48,11 @@
                     </ul>
                 </div>
                 <div class="level-container">
-                    <div class="form__input form__input--level js-slide-checkbox">
+                    <div class="form__input form__input--level js-slide-dropdown">
                         <p>Ниво <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <ul class="checkbox-list checkbox-list--level d-none">
+                    <ul class="checkbox-list checkbox-list--level d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="level1" type="checkbox" name="level1" value="level1">
                             <label for="level1" for="level-1">Ниво 1</label>
@@ -70,11 +72,11 @@
                     </ul>
                 </div>
                 <div class="language-container">
-                    <div class="form__input form__input--language js-slide-checkbox">
+                    <div class="form__input form__input--language js-slide-dropdown">
                         <p>Език <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <ul class="checkbox-list checkbox-list--language d-none">
+                    <ul class="checkbox-list checkbox-list--language d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="language1" type="checkbox" name="language1" value="language1">
                             <label for="language1" for="language-1">Език 1</label>
@@ -94,11 +96,11 @@
                     </ul>
                 </div>
                 <div class="city-container">
-                    <div class="form__input form__input--city js-slide-checkbox">
+                    <div class="form__input form__input--city js-slide-dropdown">
                         <p>Град <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <ul class="checkbox-list checkbox-list--city d-none">
+                    <ul class="checkbox-list checkbox-list--city d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="city1" type="checkbox" name="city1" value="city1">
                             <label for="city1" for="city-1">Град 1</label>
@@ -118,11 +120,11 @@
                     </ul>
                 </div>
                 <div class="employment-type-container">
-                    <div class="form__input form__input--employment-type js-slide-checkbox">
+                    <div class="form__input form__input--employment-type js-slide-dropdown">
                         <p>Вид заетост <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <ul class="checkbox-list checkbox-list--employment-type d-none">
+                    <ul class="checkbox-list checkbox-list--employment-type d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="employment-type1" type="checkbox" name="employment-type1"
                                 value="employment-type1">
@@ -145,11 +147,40 @@
                         </li>
                     </ul>
                 </div>
+                <div class="salary-container">
+                    <div class="form__input form__input--salary js-slide-dropdown">
+                        <p>Заплата <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    </div>
+                    <div class="js-dropdown-content salary-content d-none">
+                        <p class="salary-title">Изберете заплата</p>
+                        <input type="text" id="salary-range-slider" name="salary-range-slider" value="" />
+                    </div>
+                </div>
+                <div class="job-remote-container">
+                    <div class="form__input form__input--job-remote js-slide-dropdown">
+                        <p>Работа от вкъщи<span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span>
+                        </p>
+                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    </div>
+                    <div class="form__radio-container js-dropdown-content d-none">
+                        <div class="radio-value">
+                            <input type="radio" id="remote-job" name="work-type" value="remote">
+                            <label for="remote-job">От вкъщи</label>
+                        </div>
+                        <div class="radio-value">
+                            <input type="radio" id="remote-only-job" name="work-type" value="remote-only">
+                            <label for="remote-only-job">Изцяло дистанционна</label>
+                        </div>
+                    </div>
+                </div>
                 <input type="submit" value="Търси" class="btn btn-secondary form__submit">
             </form>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="./main.js"></script>
 </body>
 
