@@ -257,38 +257,31 @@ h2 {
 }
 
 /* Range Slider */
-.irs-to {
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
   background-color: var(--color-secondary-dark) !important;
 }
 
-.irs-to::before {
+.irs--round .irs-from::before,
+.irs--round .irs-to::before,
+.irs--round .irs-single::before {
   border-top-color: var(--color-secondary-dark) !important;
 }
 
-.irs-from {
-  background-color: var(--color-secondary-dark) !important;
-}
-
-.irs-max {
+.irs--round .irs-min,
+.irs--round .irs-max {
   background-color: var(--bg-color-warning-light) !important;
   color: var(--color-placeholder) !important;
 }
 
-.irs-min {
-  background-color: var(--bg-color-warning-light) !important;
-  color: var(--color-placeholder) !important;
-}
-
-.irs-from::before {
-  border-top-color: var(--color-secondary-dark) !important;
-}
-
-.irs-bar {
+.irs--round .irs-bar {
   background-color: var(--color-secondary-dark) !important;
 }
 
-.irs-handle {
+.irs--round .irs-handle {
   border-color: var(--color-secondary-dark) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Buttons */

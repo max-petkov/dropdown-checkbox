@@ -75,6 +75,7 @@ $(function () {
     grid: true,
     prefix: "$",
   });
+
   // Count Checkboxes
   const $sectorArray = [];
   $sectorCheckboxes.on("change", function () {
