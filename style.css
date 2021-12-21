@@ -209,6 +209,15 @@ h2 {
   cursor: default;
 }
 
+.salary-content {
+  background-color: #fff;
+  padding: 8px 24px 32px 24px;
+}
+
+.salary-title {
+  margin-bottom: 32px;
+}
+
 /* Job Remote */
 .job-remote-container {
   position: relative;
@@ -245,6 +254,41 @@ h2 {
   display: flex;
   justify-content: space-between;
   cursor: default;
+}
+
+/* Range Slider */
+.irs-to {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+.irs-to::before {
+  border-top-color: var(--color-secondary-dark) !important;
+}
+
+.irs-from {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+.irs-max {
+  background-color: var(--bg-color-warning-light) !important;
+  color: var(--color-placeholder) !important;
+}
+
+.irs-min {
+  background-color: var(--bg-color-warning-light) !important;
+  color: var(--color-placeholder) !important;
+}
+
+.irs-from::before {
+  border-top-color: var(--color-secondary-dark) !important;
+}
+
+.irs-bar {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+.irs-handle {
+  border-color: var(--color-secondary-dark) !important;
 }
 
 /* Buttons */

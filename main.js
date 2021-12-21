@@ -9,6 +9,7 @@ $(function () {
   const $employmentTypeCheckboxes = $(
     '.checkbox-list--employment-type [type="checkbox"]'
   );
+  const $salaryRangeSlider = $("#salary-range-slider");
 
   // Functions
   function $countCheckboxes($el, $arr) {
@@ -63,6 +64,17 @@ $(function () {
     }
   });
 
+  // Salary Slider
+  $salaryRangeSlider.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: 350,
+    max: 1000,
+    from: 450,
+    to: 850,
+    grid: true,
+    prefix: "$",
+  });
   // Count Checkboxes
   const $sectorArray = [];
   $sectorCheckboxes.on("change", function () {

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <title>HRS Work Search</title>
 </head>
 
@@ -150,9 +152,9 @@
                         <p>Заплата <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
-                    <div class="js-dropdown-content">
-                        <p>Изберете заплата</p>
-
+                    <div class="js-dropdown-content salary-content d-none">
+                        <p class="salary-title">Изберете заплата</p>
+                        <input type="text" id="salary-range-slider" name="salary-range-slider" value="" />
                     </div>
                 </div>
                 <div class="job-remote-container">
@@ -178,6 +180,7 @@
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="./main.js"></script>
 </body>
 
