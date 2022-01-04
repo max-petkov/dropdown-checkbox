@@ -16,8 +16,44 @@
     gap: 8px;
 }
 
+.hrs-filters .checkbox-list {
+    top: 94%;
+}
+
 .checkbox-item label {
     margin-bottom: 0;
+    font-size: 16px;
+}
+
+.hrs-filters .btn-secondary {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.hrs-filters .form__radio-container {
+    top: 94%;
+}
+
+.radio-value label {
+    margin: 0;
+    font-size: 16px;
+}
+
+.hrs-filters .salary-container {
+    position: relative;
+}
+
+.hrs-filters .salary-content {
+    width: 100%;
+    position: absolute;
+    top: 94%;
+    left: 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.form__input--search::placeholder {
+    font-size: 16px;
 }
 
 /* Media Queries */
