@@ -1,0 +1,110 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 186px;
+    gap: 8px;
+    font-family: inherit;
+  }
+
+  .hrs-filters .form__input--search {
+    padding-left: 48px;
+    height: 100%;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-item label {
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024.9px) {
+    .form {
+      grid-template-columns: 1fr 1fr 186px;
+    }
+
+    .form__submit {
+        grid-column: 3/4;
+      }
+
+      .city-container {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+
+      .employment-type-container {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+
+      .salary-container {
+        grid-column: 1/3;
+        grid-row: 4/5;
+      }
+
+      .job-remote-container {
+        grid-column: 1/3;
+        grid-row: 5/6;
+      }
+  }
+  
+  @media screen and (max-width: 768.9px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+
+    .form__submit {
+        grid-column: 1;
+        grid-row: 9/10;
+      }
+
+      .checkbox-list {
+        position: static;
+      }
+
+      .sector-container {
+        grid-column: 1;
+        grid-row: 2/3;
+      }
+
+      .level-container {
+        grid-column: 1;
+        grid-row: 3/4;
+      }
+
+      .language-container {
+        grid-column: 1;
+        grid-row: 4/5;
+      }
+
+      .city-container {
+        grid-column: 1;
+        grid-row: 5/6;
+      }
+
+      .employment-type-container {
+        grid-column: 1;
+        grid-row: 6/7;
+      }
+
+      .salary-container {
+        grid-column: 1;
+        grid-row: 7/8;
+      }
+
+      .salary-content {
+        position: static;
+      }
+
+      .job-remote-container {
+        grid-column: 1;
+        grid-row: 8/9;
+      }
+
+      .form__radio-container {
+        position: static;
+      }
+  }

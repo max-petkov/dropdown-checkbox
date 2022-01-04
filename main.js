@@ -1,7 +1,7 @@
 $(function () {
   // Variables
   const $showDropdownContent = $(".js-slide-dropdown");
-  const $checkboxLists = $(".checkbox-list");
+  // const $checkboxLists = $(".checkbox-list");
   const $sectorCheckboxes = $('.checkbox-list--sector [type="checkbox"]');
   const $sectorITCheckboxes = $('.checkbox-list--sector-it [type="checkbox"]');
   const $levelCheckboxes = $('.checkbox-list--level [type="checkbox"]');
