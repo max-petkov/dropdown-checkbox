@@ -24,28 +24,62 @@
                         placeholder="Име, позиция или ключова дума">
                 </div>
                 <div class="sector-container">
-                    <div class="form__input form__input--sector js-slide-dropdown">
-                        <p>Сектор <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
-                        <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                    <div>
+                        <div class="form__input form__input--sector js-slide-dropdown">
+                            <p>Сектор <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                            <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                        </div>
+                        <ul class="checkbox-list checkbox-list--sector d-none js-dropdown-content">
+                            <li class="checkbox-item">
+                                <input id="sector1" type="checkbox" name="sector1" value="sector1">
+                                <label for="sector1" for="sector-1">Сектор 1</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="it-sector" type="checkbox" name="it-sector" value="it-sector">
+                                <label for="it-sector" for="sector-1">IT Сектор</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="sector2" type="checkbox" name="sector2" value="sector2">
+                                <label for="sector2">Сектор 2</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="sector3" type="checkbox" name="sector3" value="sector3">
+                                <label for="sector3">Сектор 3</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="sector4" type="checkbox" name="sector4" value="sector4">
+                                <label for="sector4">Сектор 4</label>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="checkbox-list checkbox-list--sector d-none js-dropdown-content">
-                        <li class="checkbox-item">
-                            <input id="sector1" type="checkbox" name="sector1" id="" value="sector1">
-                            <label for="sector1" for="sector-1">Сектор 1</label>
-                        </li>
-                        <li class="checkbox-item">
-                            <input id="sector2" type="checkbox" name="sector2" id="" value="sector2">
-                            <label for="sector2">Сектор 2</label>
-                        </li>
-                        <li class="checkbox-item">
-                            <input id="sector3" type="checkbox" name="sector3" id="" value="sector3">
-                            <label for="sector3">Сектор 3</label>
-                        </li>
-                        <li class="checkbox-item">
-                            <input id="sector4" type="checkbox" name="sector4" id="" value="sector4">
-                            <label for="sector4">Сектор 4</label>
-                        </li>
-                    </ul>
+                    <div class="sector-container--it d-none">
+                        <div class="form__input form__input--sector-it js-slide-dropdown">
+                            <p>Технология <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                            <img src="./svg/fa-icon.svg" alt="" class="chevron">
+                        </div>
+                        <ul class="checkbox-list checkbox-list--sector-it d-none js-dropdown-content">
+                            <li class="checkbox-item">
+                                <input id="technology1" type="checkbox" name="technology1" value="technology1">
+                                <label for="technology1" for="sector-1">Teхнология 1</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="technology2" type="checkbox" name="technology2" value="technology2">
+                                <label for="technology2" for="sector-1">Teхнология 2</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="technology3" type="checkbox" name="technology3" value="technology3">
+                                <label for="technology3">Teхнология 3</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="technology4" type="checkbox" name="technology4" value="technology4">
+                                <label for="technology4">Teхнология 4</label>
+                            </li>
+                            <li class="checkbox-item">
+                                <input id="technology5" type="checkbox" name="technology5" value="technology5">
+                                <label for="technology5">Teхнология 5</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="level-container">
                     <div class="form__input form__input--level js-slide-dropdown">

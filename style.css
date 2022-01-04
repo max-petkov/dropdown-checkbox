@@ -72,9 +72,21 @@ h2 {
 /* General */
 .form {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 186px;
   gap: 8px;
   font-family: sans-serif;
+}
+
+@media screen and (max-width: 1024.9px) {
+  .form {
+    grid-template-columns: 1fr 1fr 186px;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form__input {
@@ -90,7 +102,20 @@ h2 {
 .form__submit {
   grid-column: 4/5;
   grid-row: -1;
-  max-width: 186px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024.9px) {
+  .form__submit {
+    grid-column: 3/4;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .form__submit {
+    grid-column: 1;
+    grid-row: 9/10;
+  }
 }
 
 .checkbox-list {
@@ -105,6 +130,12 @@ h2 {
   background: #fff;
   color: var(--color-placeholder);
   z-index: 1;
+}
+
+@media screen and (max-width: 768.9px) {
+  .checkbox-list {
+    position: static;
+  }
 }
 
 .checkbox-item:not(:last-child) {
@@ -144,7 +175,19 @@ h2 {
 
 /* Job Sector */
 .sector-container {
+  display: flex;
+}
+
+@media screen and (max-width: 768.9px) {
+  .sector-container {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+}
+
+.sector-container > div {
   position: relative;
+  flex: 1;
 }
 
 .form__input--sector {
@@ -153,9 +196,29 @@ h2 {
   cursor: default;
 }
 
+/* IT Sector */
+.sector-container--it {
+  margin-left: 8px;
+  flex: 1;
+  position: relative;
+}
+
+.form__input--sector-it {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
 /* Job Level */
 .level-container {
   position: relative;
+}
+
+@media screen and (max-width: 768.9px) {
+  .level-container {
+    grid-column: 1;
+    grid-row: 3/4;
+  }
 }
 
 .form__input--level {
@@ -169,6 +232,13 @@ h2 {
   position: relative;
 }
 
+@media screen and (max-width: 768.9px) {
+  .language-container {
+    grid-column: 1;
+    grid-row: 4/5;
+  }
+}
+
 .form__input--language {
   display: flex;
   justify-content: space-between;
@@ -178,6 +248,20 @@ h2 {
 /* Job City */
 .city-container {
   position: relative;
+}
+
+@media screen and (max-width: 1024.9px) {
+  .city-container {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .city-container {
+    grid-column: 1;
+    grid-row: 5/6;
+  }
 }
 
 .form__input--city {
@@ -191,6 +275,20 @@ h2 {
   position: relative;
 }
 
+@media screen and (max-width: 1024.9px) {
+  .employment-type-container {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .employment-type-container {
+    grid-column: 1;
+    grid-row: 6/7;
+  }
+}
+
 .form__input--employment-type {
   display: flex;
   justify-content: space-between;
@@ -199,8 +297,23 @@ h2 {
 
 /* Job Salary */
 .salary-container {
+  position: relative;
   grid-column: 1/3;
   grid-row: 3;
+}
+
+@media screen and (max-width: 1024.9px) {
+  .salary-container {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .salary-container {
+    grid-column: 1;
+    grid-row: 7/8;
+  }
 }
 
 .form__input--salary {
@@ -210,8 +323,19 @@ h2 {
 }
 
 .salary-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
   background-color: #fff;
   padding: 8px 24px 32px 24px;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768.9px) {
+  .salary-content {
+    position: static;
+  }
 }
 
 .salary-title {
@@ -220,7 +344,23 @@ h2 {
 
 /* Job Remote */
 .job-remote-container {
+  grid-column: 3/4;
+  grid-row: 3;
   position: relative;
+}
+
+@media screen and (max-width: 1024.9px) {
+  .job-remote-container {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .job-remote-container {
+    grid-column: 1;
+    grid-row: 8/9;
+  }
 }
 
 .form__radio-container {
@@ -233,6 +373,13 @@ h2 {
   color: var(--color-placeholder);
   background-color: #fff;
   border-radius: 4px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768.9px) {
+  .form__radio-container {
+    position: static;
+  }
 }
 
 .radio-value {
@@ -243,11 +390,6 @@ h2 {
 
 .radio-value:not(:last-child) {
   margin-bottom: 8px;
-}
-
-.job-remote-container {
-  grid-column: 3/4;
-  grid-row: 3;
 }
 
 .form__input--job-remote {

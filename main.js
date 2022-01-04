@@ -3,6 +3,7 @@ $(function () {
   const $showDropdownContent = $(".js-slide-dropdown");
   const $checkboxLists = $(".checkbox-list");
   const $sectorCheckboxes = $('.checkbox-list--sector [type="checkbox"]');
+  const $sectorITCheckboxes = $('.checkbox-list--sector-it [type="checkbox"]');
   const $levelCheckboxes = $('.checkbox-list--level [type="checkbox"]');
   const $languageCheckboxes = $('.checkbox-list--language [type="checkbox"]');
   const $cityCheckboxes = $('.checkbox-list--city [type="checkbox"]');
@@ -53,6 +54,18 @@ $(function () {
     }
   });
 
+   // Show Technology when IT Sektor is checked
+   $('[name="it-sector"]').on('change', function() {
+    const $checkbox = $(this);
+    const $sectorITContainer = $('.sector-container--it');
+
+    if($checkbox.is(':checked')) $sectorITContainer.removeClass('d-none');
+    else  {
+      // TODO remove all checked checkboxes
+      $sectorITContainer.addClass('d-none');
+    };
+  })
+
   // Hide elements when click outside
   $(document).on("mouseup", function (e) {
     if (
@@ -81,6 +94,12 @@ $(function () {
   $sectorCheckboxes.on("change", function () {
     const $checkbox = $(this);
     $countCheckboxes($checkbox, $sectorArray);
+  });
+
+  const $sectorITArray = [];
+  $sectorITCheckboxes.on("change", function () {
+    const $checkbox = $(this);
+    $countCheckboxes($checkbox, $sectorITArray);
   });
 
   const $levelArray = [];
