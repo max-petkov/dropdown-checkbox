@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <title>HRS Work Search</title>
@@ -25,136 +26,137 @@
                 </div>
                 <div class="sector-container">
                     <div>
-                        <div class="form__input form__input--sector js-slide-dropdown">
+                        <div class="form__input form__input--sector js-slide-dropdown" tabindex="1">
                             <p>Сектор <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                             <img src="./svg/fa-icon.svg" alt="" class="chevron">
                         </div>
                         <ul class="checkbox-list checkbox-list--sector d-none js-dropdown-content">
                             <li class="checkbox-item">
                                 <input id="sector1" type="checkbox" name="sector1" value="sector1">
-                                <label for="sector1" for="sector-1">Сектор 1</label>
+                                <label class="checkbox-label" for="sector1" for="sector-1">Сектор 1</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="it-sector" type="checkbox" name="it-sector" value="it-sector">
-                                <label for="it-sector" for="sector-1">IT Сектор</label>
+                                <label class="checkbox-label" for="it-sector" for="sector-1">IT Сектор</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="sector2" type="checkbox" name="sector2" value="sector2">
-                                <label for="sector2">Сектор 2</label>
+                                <label class="checkbox-label" for="sector2">Сектор 2</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="sector3" type="checkbox" name="sector3" value="sector3">
-                                <label for="sector3">Сектор 3</label>
+                                <label class="checkbox-label" for="sector3">Сектор 3</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="sector4" type="checkbox" name="sector4" value="sector4">
-                                <label for="sector4">Сектор 4</label>
+                                <label class="checkbox-label" for="sector4">Сектор 4</label>
                             </li>
                         </ul>
                     </div>
                     <div class="sector-container--it d-none">
                         <div class="form__input form__input--sector-it js-slide-dropdown">
-                            <p>Технология <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
+                            <p>Технология <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span>
+                            </p>
                             <img src="./svg/fa-icon.svg" alt="" class="chevron">
                         </div>
                         <ul class="checkbox-list checkbox-list--sector-it d-none js-dropdown-content">
                             <li class="checkbox-item">
                                 <input id="technology1" type="checkbox" name="technology1" value="technology1">
-                                <label for="technology1" for="sector-1">Teхнология 1</label>
+                                <label class="checkbox-label" for="technology1" for="sector-1">Teхнология 1</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="technology2" type="checkbox" name="technology2" value="technology2">
-                                <label for="technology2" for="sector-1">Teхнология 2</label>
+                                <label class="checkbox-label" for="technology2" for="sector-1">Teхнология 2</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="technology3" type="checkbox" name="technology3" value="technology3">
-                                <label for="technology3">Teхнология 3</label>
+                                <label class="checkbox-label" for="technology3">Teхнология 3</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="technology4" type="checkbox" name="technology4" value="technology4">
-                                <label for="technology4">Teхнология 4</label>
+                                <label class="checkbox-label" for="technology4">Teхнология 4</label>
                             </li>
                             <li class="checkbox-item">
                                 <input id="technology5" type="checkbox" name="technology5" value="technology5">
-                                <label for="technology5">Teхнология 5</label>
+                                <label class="checkbox-label" for="technology5">Teхнология 5</label>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="level-container">
-                    <div class="form__input form__input--level js-slide-dropdown">
+                    <div class="form__input form__input--level js-slide-dropdown" tabindex="2">
                         <p>Ниво <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
                     <ul class="checkbox-list checkbox-list--level d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="level1" type="checkbox" name="level1" value="level1">
-                            <label for="level1" for="level-1">Ниво 1</label>
+                            <label class="checkbox-label" for="level1" for="level-1">Ниво 1</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="level2" type="checkbox" name="level2" value="level2">
-                            <label for="level2">Ниво 2</label>
+                            <label class="checkbox-label" for="level2">Ниво 2</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="level3" type="checkbox" name="level3" value="level3">
-                            <label for="level3">Ниво 3</label>
+                            <label class="checkbox-label" for="level3">Ниво 3</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="level4" type="checkbox" name="level4" value="level4">
-                            <label for="level4">Ниво 4</label>
+                            <label class="checkbox-label" for="level4">Ниво 4</label>
                         </li>
                     </ul>
                 </div>
                 <div class="language-container">
-                    <div class="form__input form__input--language js-slide-dropdown">
+                    <div class="form__input form__input--language js-slide-dropdown" tabindex="3">
                         <p>Език <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
                     <ul class="checkbox-list checkbox-list--language d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="language1" type="checkbox" name="language1" value="language1">
-                            <label for="language1" for="language-1">Език 1</label>
+                            <label class="checkbox-label" for="language1" for="language-1">Език 1</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="language2" type="checkbox" name="language2" value="language2">
-                            <label for="language2">Език 2</label>
+                            <label class="checkbox-label" for="language2">Език 2</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="language3" type="checkbox" name="language3" value="language3">
-                            <label for="language3">Език 3</label>
+                            <label class="checkbox-label" for="language3">Език 3</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="language4" type="checkbox" name="language4" value="language4">
-                            <label for="language4">Език 4</label>
+                            <label class="checkbox-label" for="language4">Език 4</label>
                         </li>
                     </ul>
                 </div>
                 <div class="city-container">
-                    <div class="form__input form__input--city js-slide-dropdown">
+                    <div class="form__input form__input--city js-slide-dropdown" tabindex="4">
                         <p>Град <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
                     <ul class="checkbox-list checkbox-list--city d-none js-dropdown-content">
                         <li class="checkbox-item">
                             <input id="city1" type="checkbox" name="city1" value="city1">
-                            <label for="city1" for="city-1">Град 1</label>
+                            <label class="checkbox-label" for="city1" for="city-1">Град 1</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="city2" type="checkbox" name="city2" value="city2">
-                            <label for="city2">Град 2</label>
+                            <label class="checkbox-label" for="city2">Град 2</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="city3" type="checkbox" name="city3" value="city3">
-                            <label for="city3">Град 3</label>
+                            <label class="checkbox-label" for="city3">Град 3</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="city4" type="checkbox" name="city4" value="city4">
-                            <label for="city4">Град 4</label>
+                            <label class="checkbox-label" for="city4">Град 4</label>
                         </li>
                     </ul>
                 </div>
                 <div class="employment-type-container">
-                    <div class="form__input form__input--employment-type js-slide-dropdown">
+                    <div class="form__input form__input--employment-type js-slide-dropdown" tabindex="5">
                         <p>Вид заетост <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
@@ -162,27 +164,28 @@
                         <li class="checkbox-item">
                             <input id="employment-type1" type="checkbox" name="employment-type1"
                                 value="employment-type1">
-                            <label for="employment-type1" for="employment-type-1">Вид заетост 1</label>
+                            <label class="checkbox-label" for="employment-type1" for="employment-type-1">Вид заетост
+                                1</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="employment-type2" type="checkbox" name="employment-type2"
                                 value="employment-type2">
-                            <label for="employment-type2">Вид заетост 2</label>
+                            <label class="checkbox-label" for="employment-type2">Вид заетост 2</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="employment-type3" type="checkbox" name="employment-type3"
                                 value="employment-type3">
-                            <label for="employment-type3">Вид заетост 3</label>
+                            <label class="checkbox-label" for="employment-type3">Вид заетост 3</label>
                         </li>
                         <li class="checkbox-item">
                             <input id="employment-type4" type="checkbox" name="employment-type4"
                                 value="employment-type4">
-                            <label for="employment-type4">Вид заетост 4</label>
+                            <label class="checkbox-label" for="employment-type4">Вид заетост 4</label>
                         </li>
                     </ul>
                 </div>
                 <div class="salary-container">
-                    <div class="form__input form__input--salary js-slide-dropdown">
+                    <div class="form__input form__input--salary js-slide-dropdown" tabindex="6">
                         <p>Заплата <span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span></p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
                     </div>
@@ -192,7 +195,7 @@
                     </div>
                 </div>
                 <div class="job-remote-container">
-                    <div class="form__input form__input--job-remote js-slide-dropdown">
+                    <div class="form__input form__input--job-remote js-slide-dropdown" tabindex="7">
                         <p>Работа от вкъщи<span class="color-secondary--dark ml-1 js-count-checked-checkboxes"></span>
                         </p>
                         <img src="./svg/fa-icon.svg" alt="" class="chevron">
@@ -200,15 +203,16 @@
                     <div class="form__radio-container js-dropdown-content d-none">
                         <div class="radio-value">
                             <input type="radio" id="remote-job" name="work-type" value="remote">
-                            <label for="remote-job">От вкъщи</label>
+                            <label class="radio-label" for="remote-job">От вкъщи</label>
                         </div>
                         <div class="radio-value">
                             <input type="radio" id="remote-only-job" name="work-type" value="remote-only">
-                            <label for="remote-only-job">Изцяло дистанционна</label>
+                            <label class="radio-label" for="remote-only-job">Изцяло дистанционна</label>
                         </div>
                     </div>
                 </div>
                 <input type="submit" value="Търси" class="btn btn-secondary form__submit">
+                <button class="form__last-criteria"></button>
             </form>
         </div>
     </section>
