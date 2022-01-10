@@ -29,6 +29,7 @@
 body {
   font-family: sans-serif;
   background-color: var(--bg-color-warning-light);
+  outline: none;
 }
 
 h2 {
@@ -38,6 +39,10 @@ h2 {
 .container {
   max-width: 1496px;
   margin: 0 auto;
+}
+
+[class$="-container"] {
+  outline: none;
 }
 
 /* Helpers */

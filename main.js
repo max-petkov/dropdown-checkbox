@@ -1,12 +1,12 @@
 $(function () {
   // Variables
   const $showDropdownContent = $(".js-slide-dropdown");
-  // const $checkboxLists = $(".checkbox-list");
   const $sectorCheckboxes = $('.checkbox-list--sector [type="checkbox"]');
   const $sectorITCheckboxes = $('.checkbox-list--sector-it [type="checkbox"]');
   const $levelCheckboxes = $('.checkbox-list--level [type="checkbox"]');
   const $languageCheckboxes = $('.checkbox-list--language [type="checkbox"]');
   const $cityCheckboxes = $('.checkbox-list--city [type="checkbox"]');
+  const $parentsDropdown = $(".js-slide-dropdown").parent();
   const $employmentTypeCheckboxes = $(
     '.checkbox-list--employment-type [type="checkbox"]'
   );
@@ -39,21 +39,48 @@ $(function () {
     }
   }
 
-  // Show checkboxes
-  $showDropdownContent.on("click", function () {
-    const $dropDown = $(this);
-    const $dropDownContent = $(this).siblings(".js-dropdown-content");
-    const $chevron = $(this).find("img");
-
-    if ($dropDownContent.is(":visible")) {
-      $chevron.removeClass("chevron--active");
-      $dropDownContent.slideUp("fast");
-      $dropDown.removeClass("border-bottom-radius-none");
-    } else {
-      $dropDownContent.slideDown("fast");
-      $chevron.addClass("chevron--active");
-      $dropDown.addClass("border-bottom-radius-none");
+  function slideDropdown($slideDirection, $dropdown) {
+    if ($slideDirection === "down") {
+      $dropdown?.siblings(".js-dropdown-content").slideDown("fast");
+      $dropdown?.find(".chevron").addClass("chevron--active");
+      $dropdown?.addClass("border-bottom-radius-none");
     }
+    if ($slideDirection === "up") {
+      $dropdown?.siblings(".js-dropdown-content").slideUp("fast");
+      $dropdown?.find(".chevron").removeClass("chevron--active");
+      $dropdown?.removeClass("border-bottom-radius-none");
+    }
+  }
+
+  // Show checkboxes
+  $showDropdownContent.on("click", function (e) {
+    const $dropdown = $(this);
+    const $dropdownContent = $(this).siblings(".js-dropdown-content");
+
+    if ($dropdownContent.is(":visible")) slideDropdown("up", $dropdown);
+    else slideDropdown("down", $dropdown);
+  });
+
+  // Tabindex
+  $parentsDropdown[0] = $parentsDropdown[0].closest(".sector-container");
+  let $tabIndex = false;
+  $("body").on("keydown", function (e) {
+    if (e.keyCode === 9) {
+      $tabIndex = true;
+    }
+  });
+  $parentsDropdown.on("focusin", function (e) {
+    if (!$tabIndex) return;
+    const $dropdown = $(this).find(".js-slide-dropdown");
+    slideDropdown("down", $dropdown);
+    $tabIndex = false;
+  });
+
+  $parentsDropdown.on("focusout", function () {
+    if (!$tabIndex) return;
+    const $dropdown = $(this).find(".js-slide-dropdown");
+    slideDropdown("up", $dropdown);
+    $tabIndex = true;
   });
 
   // Show Technology when IT Sektor is checked
@@ -61,8 +88,9 @@ $(function () {
     const $checkbox = $(this);
     const $sectorITContainer = $(".sector-container--it");
 
-    if ($checkbox.is(":checked")) $sectorITContainer.fadeIn("slow");
-    else {
+    if ($checkbox.is(":checked")) {
+      $sectorITContainer.fadeIn("slow");
+    } else {
       $sectorITContainer.fadeOut("slow");
       const $checkboxesIT = $(".checkbox-list--sector-it [type='checkbox']");
 
@@ -79,36 +107,28 @@ $(function () {
     if (
       !$(e.target).closest(".js-dropdown-content").length &&
       $(".js-dropdown-content").is(":visible")
-    ) {
-      $(".js-dropdown-content").slideUp("fast");
-      $(".chevron").removeClass("chevron--active");
-      $(".js-slide-dropdown").removeClass("border-bottom-radius-none");
-    }
+    )
+      slideDropdown("up", $(".js-slide-dropdown"));
   });
 
-  // Fire tabindex
-  let $focusedDropdown;
-  $(".js-slide-dropdown").focus(function () {
-    $focusedDropdown = $(this);
-  });
+  // Fire tabindex variant 1
+  // let $copyFocusedElement;
+  // $("form").on("keydown", function (e) {
+  //   if (e.key == "Tab") {
+  //     if (e.target.classList.contains("js-slide-dropdown")) {
+  //       const $focusedEl = $(":focus");
+  //       console.log($focusedEl);
+  //       if ($copyFocusedElement) slideDropdown("up", $copyFocusedElement);
 
-  $("body").on("keydown", function (e) {
-    if (e.target.classList.contains("js-slide-dropdown")) {
-      $(".js-slide-dropdown").each(($i, $el) => {
-        if ($el == document.activeElement) {
-          $focusedDropdown.siblings(".js-dropdown-content").slideDown("fast");
-        } else {
-          $el.nextElementSibling.style.display = "none";
-        }
-      });
-    }
-
-    if (!e.target.classList.contains("js-slide-dropdown")) {
-      $(".js-slide-dropdown").each(($i, $el) => {
-        $el.nextElementSibling.style.display = "none";
-      });
-    }
-  });
+  //       if ($focusedEl[0] === $(document.activeElement)[0]) {
+  //         slideDropdown("down", $focusedEl);
+  //         $copyFocusedElement = $($focusedEl[0]);
+  //       }
+  //     }
+  //     if (!e.target.classList.contains("js-slide-dropdown"))
+  //       slideDropdown("up", $copyFocusedElement);
+  //   }
+  // });
 
   // Salary Slider
   $salaryRangeSlider.ionRangeSlider({
